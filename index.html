@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameLand - مرجع بازی‌های کالاف، فری‌فایر، پابجی</title>
+    
+    <!-- استایل‌ها -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- آیکون سایت -->
+    <link rel="icon" type="image/x-icon" href="images/logos/favicon.ico">
+    
+    <!-- متا تگ‌های SEO -->
+    <meta name="description" content="مرجع تخصصی بازی‌های کالاف دیوتی، فری‌فایر، پابجی | اخبار، آموزش، راهنما، دانلود">
+    <meta name="keywords" content="کالاف, فری فایر, پابجی, بازی موبایل, گیمینگ, آموزش بازی">
+    <meta name="author" content="GameLand">
+</head>
+<body>
+    <!-- 🔝 نوار بالایی -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="live-dot"></span>
+                    <span id="live-text">درحال پخش: تورنمنت کالاف موبایل</span>
+                </div>
+                <div class="col-md-6 text-left">
+                    <span id="date-time"></span>
+                    <span class="ms-3"><i class="fas fa-user me-1"></i> کاربران آنلاین: <span id="online-users">127</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🎯 هدر اصلی -->
+    <header class="main-header sticky-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- لوگو -->
+                <a class="navbar-brand" href="#">
+                    <img src="images/logos/logo.png" alt="GameLand Logo" height="50">
+                    <span class="brand-text">GameLand</span>
+                </a>
+
+                <!-- دکمه همبرگر برای موبایل -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- منو -->
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#"><i class="fas fa-home"></i> خانه</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-gamepad"></i> بازی‌ها
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#cod-section"><img src="images/logos/cod-icon.png" class="game-icon"> کالاف دیوتی</a></li>
+                                <li><a class="dropdown-item" href="#freefire-section"><img src="images/logos/ff-icon.png" class="game-icon"> فری‌فایر</a></li>
+                                <li><a class="dropdown-item" href="#pubg-section"><img src="images/logos/pubg-icon.png" class="game-icon"> پابجی</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#news-section"><i class="fas fa-newspaper"></i> اخبار</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#guides-section"><i class="fas fa-graduation-cap"></i> آموزش‌ها</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#videos-section"><i class="fas fa-video"></i> ویدئوها</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#downloads-section"><i class="fas fa-download"></i> دانلود</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#forum-section"><i class="fas fa-comments"></i> انجمن</a></li>
+                    </ul>
+
+                    <!-- جستجو -->
+                    <form class="d-flex search-box">
+                        <input class="form-control" type="search" placeholder="جستجو در سایت...">
+                        <button class="btn btn-search" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+
+                    <!-- دکمه کاربر -->
+                    <div class="user-section">
+                        <button class="btn btn-login"><i class="fas fa-sign-in-alt"></i> ورود</button>
+                        <button class="btn btn-register"><i class="fas fa-user-plus"></i> ثبت‌نام</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 🎮 اسلایدر اصلی -->
+    <section class="hero-slider">
+        <div class="swiper mainSwiper">
+            <div class="swiper-wrapper">
+                <!-- اسلاید 1 - کالاف -->
+                <div class="swiper-slide slide-cod">
+                    <div class="slide-overlay">
+                        <div class="container">
+                            <div class="slide-content">
+                                <span class="slide-badge">آپدیت جدید</span>
+                                <h1 class="slide-title">Call of Duty: Mobile Season 11</h1>
+                                <p class="slide-desc">مپ جدید، سلاح‌های افسانه‌ای و رویدادهای ویژه</p>
+                                <a href="#" class="btn btn-slide">مشاهده جزئیات <i class="fas fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- اسلاید 2 - فری‌فایر -->
+                <div class="swiper-slide slide-ff">
+                    <div class="slide-overlay">
+                        <div class="container">
+                            <div class="slide-content">
+                                <span class="slide-badge">تورنمنت</span>
+                                <h1 class="slide-title">Free Fire World Series 2024</h1>
+                                <p class="slide-desc">رقابت بهترین تیم‌های جهان - جوایز 2 میلیون دلاری</p>
+                                <a href="#" class="btn btn-slide">مشاهده رویداد <i class="fas fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- اسلاید 3 - پابجی -->
+                <div class="swiper-slide slide-pubg">
+                    <div class="slide-overlay">
+                        <div class="container">
+                            <div class="slide-content">
+                                <span class="slide-badge">مپ جدید</span>
+                                <h1 class="slide-title">PUBG Mobile 3.1 Update</h1>
+                                <p class="slide-desc">مپ Rondo، وسایل نقلیه جدید و حالت بازی</p>
+                                <a href="#" class="btn btn-slide">دانلود آپدیت <i class="fas fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ناوبری اسلایدر -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- 📊 آمار زنده -->
+    <section class="live-stats">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <h3 id="total-players">4,287,421</h3>
+                        <p>بازیکنان آنلاین</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <i class="fas fa-trophy"></i>
+                        <h3 id="tournaments">1,234</h3>
+                        <p>تورنمنت فعال</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <i class="fas fa-download"></i>
+                        <h3 id="downloads-count">9,845</h3>
+                        <p>دانلود امروز</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <i class="fas fa-comment"></i>
+                        <h3 id="posts-today">324</h3>
+                        <p>پست امروز</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🎮 بخش بازی‌ها -->
+    <section class="games-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-gamepad"></i> بازی‌های محبوب</h2>
+                <a href="#" class="section-more">مشاهده همه <i class="fas fa-arrow-left"></i></a>
+            </div>
+            
+            <div class="row">
+                <!-- کالاف دیوتی -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="game-card" id="cod-card">
+                        <div class="game-header">
+                            <img src="images/games/cod-banner.jpg" class="game-banner" alt="Call of Duty">
+                            <div class="game-logo">
+                                <img src="images/logos/cod-logo.png" alt="COD Logo">
+                            </div>
+                            <span class="game-status online">آنلاین</span>
+                        </div>
+                        <div class="game-body">
+                            <h3 class="game-title">Call of Duty: Mobile</h3>
+                            <p class="game-desc">تجربه شوتر چندنفره با گرافیک خیره‌کننده</p>
+                            <div class="game-stats">
+                                <span><i class="fas fa-users"></i> 2.1M بازیکن</span>
+                                <span><i class="fas fa-star"></i> 4.8/5</span>
+                                <span><i class="fas fa-download"></i> 500MB+</span>
+                            </div>
+                            <div class="game-buttons">
+                                <button class="btn btn-game btn-cod"><i class="fas fa-play"></i> بازی کن</button>
+                                <button class="btn btn-guide"><i class="fas fa-book"></i> راهنما</button>
+                                <button class="btn btn-download"><i class="fas fa-download"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- فری‌فایر -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="game-card" id="freefire-card">
+                        <div class="game-header">
+                            <img src="images/games/ff-banner.jpg" class="game-banner" alt="Free Fire">
+                            <div class="game-logo">
+                                <img src="images/logos/ff-logo.png" alt="Free Fire Logo">
+                            </div>
+                            <span class="game-status online">آنلاین</span>
+                        </div>
+                        <div class="game-body">
+                            <h3 class="game-title">Free Fire</h3>
+                            <p class="game-desc">بتل رویال سریع با مچ‌های 10 دقیقه‌ای</p>
+                            <div class="game-stats">
+                                <span><i class="fas fa-users"></i> 3.4M بازیکن</span>
+                                <span><i class="fas fa-star"></i> 4.5/5</span>
+                                <span><i class="fas fa-download"></i> 700MB+</span>
+                            </div>
+                            <div class="game-buttons">
+                                <button class="btn btn-game btn-ff"><i class="fas fa-play"></i> بازی کن</button>
+                                <button class="btn btn-guide"><i class="fas fa-book"></i> راهنما</button>
+                                <button class="btn btn-download"><i class="fas fa-download"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- پابجی -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="game-card" id="pubg-card">
+                        <div class="game-header">
+                            <img src="images/games/pubg-banner.jpg" class="game-banner" alt="PUBG">
+                            <div class="game-logo">
+                                <img src="images/logos/pubg-logo.png" alt="PUBG Logo">
+                            </div>
+                            <span class="game-status online">آنلاین</span>
+                        </div>
+                        <div class="game-body">
+                            <h3 class="game-title">PUBG Mobile</h3>
+                            <p class="game-desc">بتل رویال واقع‌گرا با 100 پلیر در هر مچ</p>
+                            <div class="game-stats">
+                                <span><i class="fas fa-users"></i> 1.8M بازیکن</span>
+                                <span><i class="fas fa-star"></i> 4.7/5</span>
+                                <span><i class="fas fa-download"></i> 2GB+</span>
+                            </div>
+                            <div class="game-buttons">
+                                <button class="btn btn-game btn-pubg"><i class="fas fa-play"></i> بازی کن</button>
+                                <button class="btn btn-guide"><i class="fas fa-book"></i> راهنما</button>
+                                <button class="btn btn-download"><i class="fas fa-download"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📰 بخش اخبار -->
+    <section class="news-section" id="news-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-newspaper"></i> آخرین اخبار</h2>
+                <div class="news-filter">
+                    <button class="filter-btn active" data-filter="all">همه</button>
+                    <button class="filter-btn" data-filter="cod">کالاف</button>
+                    <button class="filter-btn" data-filter="ff">فری‌فایر</button>
+                    <button class="filter-btn" data-filter="pubg">پابجی</button>
+                </div>
+            </div>
+            
+            <div class="row" id="news-container">
+                <!-- اخبار از طریق JS لود می‌شوند -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 🎥 بخش ویدئو -->
+    <section class="videos-section" id="videos-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-video"></i> ویدئوهای داغ</h2>
+                <a href="#" class="section-more">همه ویدئوها <i class="fas fa-arrow-left"></i></a>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mb-4">
+                    <div class="main-video">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="تاپ پلی کالاف" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">10 تاپ پلی باورنکردنی کالاف موبایل</h3>
+                            <div class="video-meta">
+                                <span><i class="fas fa-eye"></i> 245,897 بازدید</span>
+                                <span><i class="fas fa-calendar"></i> 2 ساعت پیش</span>
+                                <span><i class="fas fa-user"></i> ProGamer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="side-videos">
+                        <div class="side-video-item">
+                            <div class="side-video-thumb">
+                                <img src="images/videos/thumb1.jpg" alt="ویدئو">
+                                <span class="video-duration">12:45</span>
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                            </div>
+                            <div class="side-video-info">
+                                <h4>آموزش اسنایپینگ حرفه‌ای</h4>
+                                <p>فری‌فایر - 45K بازدید</p>
+                            </div>
+                        </div>
+                        
+                        <div class="side-video-item">
+                            <div class="side-video-thumb">
+                                <img src="images/videos/thumb2.jpg" alt="ویدئو">
+                                <span class="video-duration">18:30</span>
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                            </div>
+                            <div class="side-video-info">
+                                <h4>راهنمای مپ جدید پابجی</h4>
+                                <p>پابجی - 89K بازدید</p>
+                            </div>
+                        </div>
+                        
+                        <div class="side-video-item">
+                            <div class="side-video-thumb">
+                                <img src="images/videos/thumb3.jpg" alt="ویدئو">
+                                <span class="video-duration">9:15</span>
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                            </div>
+                            <div class="side-video-info">
+                                <h4>ترفندهای Movement کالاف</h4>
+                                <p>کالاف - 112K بازدید</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📥 بخش دانلود -->
+    <section class="downloads-section" id="downloads-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-download"></i> دانلودها</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="download-card">
+                        <div class="download-icon">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <h3>والپیپر 4K</h3>
+                        <p>والپیپرهای باکیفیت بازی‌ها</p>
+                        <button class="btn btn-download-full">دانلود (1.2GB)</button>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="download-card">
+                        <div class="download-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>موزیک و صدا</h3>
+                        <p>موزیک‌ها و افکت‌های صوتی</p>
+                        <button class="btn btn-download-full">دانلود (850MB)</button>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="download-card">
+                        <div class="download-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>ابزارهای کمکی</h3>
+                        <p>برنامه‌های مفید برای گیمینگ</p>
+                        <button class="btn btn-download-full">دانلود (320MB)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 💬 بخش انجمن -->
+    <section class="forum-section" id="forum-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-comments"></i> انجمن گیمینگ</h2>
+                <a href="#" class="btn btn-forum"><i class="fas fa-plus"></i> پست جدید</a>
+            </div>
+            
+            <div class="forum-container">
+                <div class="forum-post">
+                    <div class="post-header">
+                        <img src="images/users/user1.jpg" class="post-avatar" alt="کاربر">
+                        <div class="post-author">
+                            <h4>ProPlayer_IR</h4>
+                            <span class="post-rank">حرفه‌ای</span>
+                        </div>
+                        <span class="post-time">10 دقیقه پیش</span>
+                    </div>
+                    <div class="post-content">
+                        <h3>بهترین تنظیمات حساسیت برای کالاف؟</h3>
+                        <p>سلام دوستان، من تازه شروع کردم به بازی کالاف. لطفاً بهترین تنظیمات Sensitivity رو برای کنترل بهتر پیشنهاد بدید...</p>
+                    </div>
+                    <div class="post-footer">
+                        <button class="post-like"><i class="fas fa-heart"></i> 42</button>
+                        <button class="post-comment"><i class="fas fa-comment"></i> 8</button>
+                        <span class="post-tag">#کالاف</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🏆 رنکینگ -->
+    <section class="ranking-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-trophy"></i> رنکینگ برترین‌ها</h2>
+            </div>
+            
+            <div class="ranking-table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>رتبه</th>
+                            <th>بازیکن</th>
+                            <th>بازی</th>
+                            <th>K/D</th>
+                            <th>برد</th>
+                            <th>امتیاز</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ranking-body">
+                        <!-- از JS لود می‌شود -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 👣 فوتر -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-about">
+                        <img src="images/logos/logo-white.png" alt="GameLand" class="footer-logo">
+                        <p class="footer-desc">
+                            GameLand مرجع تخصصی بازی‌های موبایل و کامپیوتر در ایران. 
+                            ارائه آخرین اخبار، آموزش‌ها و راهنمای‌های تخصصی.
+                        </p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h4 class="footer-title">بازی‌ها</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Call of Duty</a></li>
+                        <li><a href="#">Free Fire</a></li>
+                        <li><a href="#">PUBG Mobile</a></li>
+                        <li><a href="#">Mobile Legends</a></li>
+                        <li><a href="#">Clash of Clans</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h4 class="footer-title">لینک‌های مفید</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">اخبار</a></li>
+                        <li><a href="#">آموزش‌ها</a></li>
+                        <li><a href="#">دانلودها</a></li>
+                        <li><a href="#">تورنمنت‌ها</li>
+                        <li><a href="#">تماس با ما</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h4 class="footer-title">عضویت در خبرنامه</h4>
+                    <p class="newsletter-desc">
+                        آخرین اخبار و آپدیت‌ها را در ایمیل خود دریافت کنید
+                    </p>
+                    <div class="newsletter-form">
+                        <input type="email" class="form-control" placeholder="ایمیل شما...">
+                        <button class="btn btn-newsletter">عضویت</button>
+                    </div>
+                    
+                    <div class="download-app">
+                        <h5>دانلود اپلیکیشن</h5>
+                        <div class="app-buttons">
+                            <a href="#" class="btn btn-app">
+                                <i class="fab fa-google-play"></i> Google Play
+                            </a>
+                            <a href="#" class="btn btn-app">
+                                <i class="fab fa-apple"></i> App Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="copyright">© 2024 GameLand. تمامی حقوق محفوظ است.</p>
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <div class="footer-bottom-links">
+                            <a href="#">قوانین</a>
+                            <a href="#">حریم خصوصی</a>
+                            <a href="#">درباره ما</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 📱 دکمه بازگشت به بالا -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- اسکریپت‌ها -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

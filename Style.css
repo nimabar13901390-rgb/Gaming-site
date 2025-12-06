@@ -1,0 +1,1156 @@
+/* استایل‌های اصلی سایت گیمینگ */
+
+:root {
+    --primary-dark: #0a0a0f;
+    --secondary-dark: #1a1a2e;
+    --accent-red: #ff003c;
+    --accent-blue: #00a8ff;
+    --accent-orange: #ff7b00;
+    --accent-green: #00ff88;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --card-bg: #161622;
+    --border-color: #2a2a3a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: var(--primary-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 🎯 نوار بالایی */
+.top-bar {
+    background: linear-gradient(90deg, var(--accent-red), var(--accent-orange));
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.live-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-green);
+    border-radius: 50%;
+    margin-left: 8px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* 🎨 هدر */
+.main-header {
+    background-color: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(255, 0, 60, 0.1);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-text {
+    font-size: 24px;
+    font-weight: 900;
+    background: linear-gradient(45deg, var(--accent-red), var(--accent-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+    color: var(--text-primary) !important;
+    margin: 0 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent-red) !important;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-red);
+    border-radius: 2px;
+}
+
+.dropdown-menu {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.dropdown-item {
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-item:hover {
+    background-color: var(--secondary-dark);
+    color: var(--accent-red);
+}
+
+.game-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.search-box {
+    margin: 0 20px;
+}
+
+.search-box input {
+    background-color: var(--secondary-dark);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 25px;
+    padding: 8px 20px;
+    min-width: 250px;
+}
+
+.search-box input:focus {
+    border-color: var(--accent-red);
+    box-shadow: 0 0 0 2px rgba(255, 0, 60, 0.2);
+}
+
+.btn-search {
+    background-color: var(--accent-red);
+    color: white;
+    border-radius: 25px;
+    padding: 8px 20px;
+    margin-right: 10px;
+}
+
+.btn-login, .btn-register {
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-login {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-register {
+    background-color: var(--accent-red);
+    color: white;
+    border: none;
+    margin-right: 10px;
+}
+
+.btn-login:hover {
+    border-color: var(--accent-red);
+    color: var(--accent-red);
+}
+
+.btn-register:hover {
+    background-color: #ff0022;
+    transform: translateY(-2px);
+}
+
+/* 🎮 اسلایدر */
+.hero-slider {
+    height: 70vh;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.slide-cod {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/banners/cod-bg.jpg');
+}
+
+.slide-ff {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/banners/ff-bg.jpg');
+}
+
+.slide-pubg {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/banners/pubg-bg.jpg');
+}
+
+.slide-overlay {
+    width: 100%;
+    padding: 20px;
+}
+
+.slide-content {
+    max-width: 600px;
+}
+
+.slide-badge {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.slide-title {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #fff, var(--accent-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.slide-desc {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.btn-slide {
+    background: linear-gradient(45deg, var(--accent-red), var(--accent-orange));
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-slide:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 0, 60, 0.3);
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: var(--accent-red) !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--accent-red) !important;
+}
+
+/* 📊 آمار */
+.live-stats {
+    padding: 40px 0;
+    background-color: var(--secondary-dark);
+}
+
+.stat-card {
+    background: linear-gradient(135deg, var(--card-bg), var(--secondary-dark));
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-red);
+    box-shadow: 0 10px 20px rgba(255, 0, 60, 0.1);
+}
+
+.stat-card i {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: var(--accent-red);
+}
+
+.stat-card h3 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, var(--accent-red), var(--accent-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-card p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* 🎮 کارت بازی‌ها */
+.games-section {
+    padding: 80px 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title i {
+    color: var(--accent-red);
+}
+
+.section-more {
+    color: var(--accent-red);
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.section-more:hover {
+    gap: 10px;
+}
+
+.game-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-red);
+    box-shadow: 0 20px 40px rgba(255, 0, 60, 0.2);
+}
+
+.game-header {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.game-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.game-card:hover .game-banner {
+    transform: scale(1.1);
+}
+
+.game-logo {
+    position: absolute;
+    bottom: -30px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    background: var(--card-bg);
+    border-radius: 50%;
+    padding: 10px;
+    border: 3px solid var(--accent-red);
+}
+
+.game-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.game-status {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.game-status.online {
+    background-color: var(--accent-green);
+    color: var(--primary-dark);
+}
+
+.game-body {
+    padding: 40px 20px 20px;
+}
+
+.game-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.game-desc {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 20px;
+    height: 60px;
+}
+
+.game-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 15px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.game-stats span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.game-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-game {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-cod {
+    background: linear-gradient(45deg, #2a6eff, #00a8ff);
+    color: white;
+}
+
+.btn-ff {
+    background: linear-gradient(45deg, #ff9900, #ffcc00);
+    color: var(--primary-dark);
+}
+
+.btn-pubg {
+    background: linear-gradient(45deg, #00b894, #00ff88);
+    color: var(--primary-dark);
+}
+
+.btn-guide, .btn-download {
+    width: 50px;
+    background-color: var(--secondary-dark);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.btn-game:hover, .btn-guide:hover, .btn-download:hover {
+    transform: translateY(-2px);
+}
+
+/* 📰 بخش اخبار */
+.news-section {
+    padding: 80px 0;
+    background-color: var(--secondary-dark);
+}
+
+.news-filter {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: var(--accent-red);
+    border-color: var(--accent-red);
+}
+
+.news-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-red);
+}
+
+.news-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image img {
+    transform: scale(1.1);
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    background-color: var(--accent-red);
+    color: white;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.news-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-secondary);
+    font-size: 12px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* 🎥 بخش ویدئو */
+.videos-section {
+    padding: 80px 0;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+.video-info {
+    margin-top: 20px;
+}
+
+.video-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.video-meta {
+    display: flex;
+    gap: 20px;
+    color: var(--text-secondary);
+}
+
+.side-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.side-video-item {
+    display: flex;
+    gap: 15px;
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.side-video-item:hover {
+    border-color: var(--accent-red);
+    transform: translateX(-5px);
+}
+
+.side-video-thumb {
+    position: relative;
+    width: 120px;
+    height: 70px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.side-video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 10px;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 0, 60, 0.8);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
+
+.side-video-info h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.side-video-info p {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+/* 📥 دانلودها */
+.downloads-section {
+    padding: 80px 0;
+    background-color: var(--secondary-dark);
+}
+
+.download-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.download-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-red);
+}
+
+.download-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, var(--accent-red), var(--accent-orange));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.download-icon i {
+    font-size: 32px;
+    color: white;
+}
+
+.download-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.download-card p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.btn-download-full {
+    background-color: var(--accent-red);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.btn-download-full:hover {
+    background-color: #ff0022;
+    transform: translateY(-2px);
+}
+
+/* 💬 انجمن */
+.forum-section {
+    padding: 80px 0;
+}
+
+.btn-forum {
+    background: linear-gradient(45deg, var(--accent-red), var(--accent-orange));
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.forum-post {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.post-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-red);
+}
+
+.post-author h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.post-rank {
+    font-size: 12px;
+    color: var(--accent-red);
+    font-weight: bold;
+}
+
+.post-time {
+    margin-right: auto;
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+.post-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.post-content p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.post-footer {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.post-like, .post-comment {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.post-like:hover {
+    color: var(--accent-red);
+}
+
+.post-comment:hover {
+    color: var(--accent-blue);
+}
+
+.post-tag {
+    background-color: var(--secondary-dark);
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    color: var(--accent-red);
+}
+
+/* 🏆 رنکینگ */
+.ranking-section {
+    padding: 80px 0;
+    background-color: var(--secondary-dark);
+}
+
+.ranking-table {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.table {
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.table thead {
+    background-color: var(--accent-red);
+}
+
+.table th {
+    border: none;
+    padding: 15px;
+    font-weight: 700;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(255, 0, 60, 0.1);
+}
+
+.table td {
+    padding: 15px;
+    vertical-align: middle;
+    border: none;
+}
+
+/* 👣 فوتر */
+.main-footer {
+    background-color: #0a0a0f;
+    padding: 60px 0 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-about {
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-desc {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--secondary-dark);
+    border-radius: 50%;
+    color: var(--text-primary);
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--accent-red);
+    transform: translateY(-3px);
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.footer-links a:hover {
+    color: var(--accent-red);
+    padding-right: 5px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    background-color: var(--secondary-dark);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+
+.btn-newsletter {
+    background-color: var(--accent-red);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    white-space: nowrap;
+}
+
+.download-app h5 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.app-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-app {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--secondary-dark);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-app:hover {
+    background-color: var(--accent-red);
+    border-color: var(--accent-red);
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.copyright {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.footer-bottom-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: var(--accent-red);
+}
+
+/* 📱 دکمه بازگشت به بالا */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-red);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #ff0022;
+    transform: translateY(-5px);
+}
+
+/* 📱 رسپانسیو */
+@media (max-width: 768px) {
+    .slide-title {
+        font-size: 32px;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    
+    .search-box input {
+        min-width: 200px;
+    }
+    
+    .game-stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .news-filter {
+        flex-wrap: wrap;
+    }
+    
+    .video-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .post-header {
+        flex-wrap: wrap;
+    }
+    
+    .footer-bottom-links {
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+    
+    .app-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-collapse {
+        background-color: var(--secondary-dark);
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 10px;
+    }
+    
+    .user-section {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+    }
+    
+    .hero-slider {
+        height: 50vh;
+        min-height: 400px;
+    }
+    
+    .slide-title {
+        font-size: 24px;
+    }
+    
+    .slide-desc {
+        font-size: 14px;
+    }
+    
+    .stat-card {
+        padding: 15px;
+    }
+    
+    .stat-card h3 {
+        font-size: 24px;
+    }
+}
